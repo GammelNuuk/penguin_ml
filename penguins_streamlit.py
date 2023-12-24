@@ -17,9 +17,9 @@ st.write(
 )
 
 password_guess = st.text_input("What is the Password?")
-if password_guess != "streamlit_is_great":
+if password_guess != st.secrets["password"]:
+    # password: streamlit_is_great
     st.stop()
-
 
 penguin_file = st.file_uploader("Upload your own penguin data")
 
